@@ -1,0 +1,71 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Club & Travel Buddy</title>
+    <style>
+        body{font-family:Arial;background:#eef2ff;padding:20px}
+        h1,h2{text-align:center;color:#1e40af}
+        .box{background:white;padding:15px;margin:15px auto;
+        max-width:400px;border-radius:10px}
+        input,button{width:100%;padding:10px;margin:5px 0;
+        box-sizing:border-box}
+        button{background:#2563eb;color:white;border:0;cursor:pointer}
+        a{display:block;text-align:center;margin:10px}
+    </style>
+</head>
+<body>
+
+<h1>Campus Club & Travel Buddy</h1>
+
+<div class="box">
+<h2>Add Member</h2>
+<form action="/members" method="POST">
+<input name="memberId" placeholder="Member ID" required>
+<input name="name" placeholder="Name" required>
+<input name="clubName" placeholder="Club Name" required>
+<input name="year" type="number" placeholder="Year" required>
+<input name="role" placeholder="Role" required>
+<input name="points" type="number" placeholder="Points" required>
+<input name="interests" placeholder="Interests">
+<input name="status" placeholder="Status">
+<button>Add Member</button>
+</form>
+<a href="/members">View Members</a>
+</div>
+
+<div class="box">
+<h2>Search Member</h2>
+<form action="/members/search" method="GET">
+<input name="memberId" placeholder="Member ID" required>
+<button>Search</button>
+</form>
+</div>
+
+<div class="box">
+<h2>Add Travel Buddy</h2>
+<form action="/buddies" method="POST">
+<input name="buddyId" placeholder="Buddy ID" required>
+<input name="name" placeholder="Name" required>
+<input name="destination" placeholder="Destination" required>
+<input name="age" type="number" placeholder="Age" required>
+<input name="budget" type="number" placeholder="Budget" required>
+<input name="tripDuration" type="number" placeholder="Trip Duration" required>
+<input name="interests" placeholder="Interests">
+<input name="status" placeholder="Status">
+<button>Add Buddy</button>
+</form>
+<a href="/buddies">View Travel Buddies</a>
+</div>
+
+<div class="box">
+<h2>Search Travel Buddy</h2>
+<form action="/buddies/search" method="GET">
+<input name="buddyId" placeholder="Buddy ID" required>
+<button>Search</button>
+</form>
+</div>
+
+</body>
+</html>
+```
